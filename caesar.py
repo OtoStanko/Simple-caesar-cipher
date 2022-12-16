@@ -10,7 +10,11 @@ def getNewLetterLower(letter, s):
 def getComplementLetter(letter):
     return chr((26 - (ord(letter) - 97)) % 26 + 97)
 
-
+"""
+text - text to be encrypted.
+word - is used for encryption. Must consist of small letters without
+        any special characters.
+"""
 def encrypt(text, word):
     output = "";
     s = [ord(w) - 97 for w in word]
