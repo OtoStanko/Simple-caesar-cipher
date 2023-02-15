@@ -1,3 +1,8 @@
+def prettyPrint(text):
+    splittedText = text.split("\n")
+    for line in splittedText:
+        print(line)
+
 
 def getNewLetterUpper(letter, s):
     return chr((ord(letter) + s - 65) % 26 + 65)
