@@ -1,3 +1,6 @@
+special_letters = 'åøæ'
+num_spec_letters = len(special_letters)
+
 def prettyPrint(text):
     splittedText = text.split("\n")
     for line in splittedText:
@@ -5,10 +8,14 @@ def prettyPrint(text):
 
 
 def getNewLetterUpper(letter, s):
+    if letter.lower() in special_letters:
+        return letter.upper()
     return chr((ord(letter) + s - 65) % 26 + 65)
 
 
 def getNewLetterLower(letter, s):
+    if letter in special_letters:
+        return letter
     return chr((ord(letter) + s - 97) % 26 + 97)
 
 
